@@ -1,12 +1,15 @@
 <div class="container">
-<h1>All cocktails</h1>
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1556463208-f8c2505e8299?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1355&q=80);">
+    <div class="ban_container">
+      <h1>Web Cocktails</h1>
+      <p>All cocktails in one glass</p>
+      <%= link_to "CREATE!", new_cocktail_path, class: "btn btn-flat-primary" %>
+    </div>
+  </div>
 
   <div class="cards">
     <% @cocktails.each do |cocktail| %>
-      <div class="card-category"><%= link_to cocktail.name, cocktail_path(cocktail) %></div>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url('<%= cocktail.photo.present? ? cl_image_path(cocktail.photo.key, height: 300, width: 400, crop: :fill) : image_path("missingimage.png") %>');"><%= link_to cocktail.name, cocktail_path(cocktail) %></div>
     <% end %>
   </div>
-
-
-<%= link_to "create a cocktail", new_cocktail_path %>
 </div>

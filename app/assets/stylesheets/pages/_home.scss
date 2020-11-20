@@ -1,7 +1,14 @@
-// Specific CSS for your home-page
-body {
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
+body {
+  font-family: oswald, 'sans serif';
 }
+
+h1 {
+  font-size: 48px;
+  font-family: oswald, 'sans serif';
+}
+
 
 .container {
   margin: 0 auto;

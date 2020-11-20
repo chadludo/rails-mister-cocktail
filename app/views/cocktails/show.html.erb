@@ -15,4 +15,5 @@
 
 <%= link_to "Back", root_path, class: "btn btn-flat" %>
 <%= link_to 'Add a dose', new_cocktail_dose_path(@cocktail), class: "btn btn-flat" %>
+<%= link_to 'Delete cocktail', cocktail_path(@cocktail), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-flat-primary" %>
 </div>
